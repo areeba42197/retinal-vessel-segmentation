@@ -1,0 +1,7 @@
+{
+ "final": "E3",
+ "threshold": 0.45,
+ "note": "best val_dice 0.8138; within 0.002 tie-band: ['E3', 'E4']; chose fewest params -> E3",
+ "val_dice_at_thr": 0.8136551521177882,
+ "val_dice_tta": 0.8170758998505098
+}

@@ -1,0 +1,7 @@
+Experiment,Architecture,Preprocessing,Loss,Augmentation,Params,Best epoch,Val Dice,Val IoU,Test Dice
+E1,U-Net,Basic (RGB/255),BCE,No,"1,945,521",25,0.7935,0.6577,not evaluated (held out)
+E2,U-Net,Basic (RGB/255),BCE+Dice,No,"1,945,521",31,0.8033,0.6712,not evaluated (held out)
+E3 (FINAL),U-Net,Basic (RGB/255),BCE+Dice,Yes,"1,945,521",35,0.8133,0.6853,0.8153
+E4,U-Net,CLAHE,BCE+Dice,Yes,"1,945,521",37,0.8138,0.686,not evaluated (held out)
+E5,EfficientNet-B0 U-Net (random init),Basic (RGB/255),BCE+Dice,Yes,"6,788,140",40,0.7993,0.6657,not evaluated (held out)
+E6,EfficientNet-B0 U-Net (random init),CLAHE,BCE+Dice,Yes,"6,788,140",40,0.8062,0.6753,not evaluated (held out)

@@ -1,0 +1,333 @@
+>> /usr/bin/python3 -m src.train --config configs/baseline.yaml --exp E1 --set loss=bce augmentation.enabled=false
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791008899.546287     959 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1791008899.575741     959 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX512_FP16 AVX_VNNI AMX_TILE AMX_INT8 AMX_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791008900.610010     959 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Python     : 3.13.16
+TensorFlow : 2.21.0
+Keras      : 3.15.1
+GPU        : none (CPU only)
+CPU cores  : 2
+RAM        : 8.2 GB
+[E1] unet: params 1,945,521 trainable 1,942,577 | train [23, 24, 25, 27, 28, 30, 31, 32, 33, 34, 39, 40] val [26, 29, 35, 37]
+I0000 00:00:1791008902.647509     959 generator_dataset_op.cc:213] Memory patch applied: M_TRIM_THRESHOLD=128 kb was set.
+  ep  1 loss 0.3828 dice 0.0000 | val_loss 0.5530 val_dice 0.3974@0.4 (0.5: 0.0000) val_iou 0.2480 lr 1.0e-03
+  ep  2 loss 0.2839 dice 0.0000 | val_loss 0.4362 val_dice 0.1086@0.3 (0.5: 0.0000) val_iou 0.0574 lr 1.0e-03
+  ep  3 loss 0.2238 dice 0.0000 | val_loss 0.3691 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  4 loss 0.1913 dice 0.0000 | val_loss 0.3841 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  5 loss 0.1791 dice 0.0000 | val_loss 0.3993 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  6 loss 0.1715 dice 0.0000 | val_loss 0.4015 val_dice 0.0058@0.3 (0.5: 0.0001) val_iou 0.0029 lr 1.0e-03
+  ep  7 loss 0.1640 dice 0.0000 | val_loss 0.4504 val_dice 0.0156@0.3 (0.5: 0.0018) val_iou 0.0079 lr 1.0e-03
+  ep  8 loss 0.1592 dice 0.0000 | val_loss 0.3940 val_dice 0.1315@0.3 (0.5: 0.0626) val_iou 0.0704 lr 1.0e-03
+  ep  9 loss 0.1518 dice 0.0000 | val_loss 0.3878 val_dice 0.1366@0.3 (0.5: 0.0555) val_iou 0.0733 lr 5.0e-04
+  ep 10 loss 0.1474 dice 0.0000 | val_loss 0.3722 val_dice 0.2430@0.3 (0.5: 0.1420) val_iou 0.1383 lr 5.0e-04
+  ep 11 loss 0.1457 dice 0.0000 | val_loss 0.3662 val_dice 0.3243@0.3 (0.5: 0.2145) val_iou 0.1935 lr 5.0e-04
+  ep 12 loss 0.1449 dice 0.0000 | val_loss 0.2955 val_dice 0.4705@0.3 (0.5: 0.3499) val_iou 0.3076 lr 5.0e-04
+  ep 13 loss 0.1458 dice 0.0000 | val_loss 0.2769 val_dice 0.5566@0.3 (0.5: 0.4526) val_iou 0.3856 lr 5.0e-04
+  ep 14 loss 0.1376 dice 0.0000 | val_loss 0.2561 val_dice 0.5952@0.3 (0.5: 0.4895) val_iou 0.4237 lr 5.0e-04
+  ep 15 loss 0.1402 dice 0.0000 | val_loss 0.2009 val_dice 0.7018@0.3 (0.5: 0.6367) val_iou 0.5406 lr 5.0e-04
+  ep 16 loss 0.1322 dice 0.0000 | val_loss 0.1763 val_dice 0.7306@0.3 (0.5: 0.6649) val_iou 0.5755 lr 5.0e-04
+  ep 17 loss 0.1335 dice 0.0000 | val_loss 0.1593 val_dice 0.7573@0.3 (0.5: 0.7234) val_iou 0.6093 lr 5.0e-04
+  ep 18 loss 0.1316 dice 0.0000 | val_loss 0.1478 val_dice 0.7725@0.4 (0.5: 0.7656) val_iou 0.6293 lr 5.0e-04
+  ep 19 loss 0.1305 dice 0.0000 | val_loss 0.1461 val_dice 0.7791@0.3 (0.5: 0.7652) val_iou 0.6382 lr 5.0e-04
+  ep 20 loss 0.1306 dice 0.0000 | val_loss 0.1341 val_dice 0.7905@0.4 (0.5: 0.7883) val_iou 0.6536 lr 5.0e-04
+  ep 21 loss 0.1299 dice 0.0000 | val_loss 0.1367 val_dice 0.7876@0.3 (0.5: 0.7721) val_iou 0.6497 lr 5.0e-04
+  ep 22 loss 0.1243 dice 0.0000 | val_loss 0.1357 val_dice 0.7863@0.3 (0.5: 0.7754) val_iou 0.6479 lr 5.0e-04
+  ep 23 loss 0.1265 dice 0.0000 | val_loss 0.1412 val_dice 0.7794@0.5 (0.5: 0.7794) val_iou 0.6385 lr 5.0e-04
+  ep 24 loss 0.1232 dice 0.0000 | val_loss 0.1355 val_dice 0.7840@0.4 (0.5: 0.7813) val_iou 0.6448 lr 5.0e-04
+  ep 25 loss 0.1232 dice 0.0000 | val_loss 0.1325 val_dice 0.7935@0.5 (0.5: 0.7935) val_iou 0.6577 lr 5.0e-04
+  ep 26 loss 0.1219 dice 0.0000 | val_loss 0.1471 val_dice 0.7734@0.6 (0.5: 0.7716) val_iou 0.6305 lr 5.0e-04
+  ep 27 loss 0.1212 dice 0.0000 | val_loss 0.1354 val_dice 0.7871@0.5 (0.5: 0.7871) val_iou 0.6489 lr 5.0e-04
+  ep 28 loss 0.1195 dice 0.0000 | val_loss 0.1342 val_dice 0.7912@0.4 (0.5: 0.7878) val_iou 0.6545 lr 5.0e-04
+  ep 29 loss 0.1245 dice 0.0000 | val_loss 0.1629 val_dice 0.7724@0.7 (0.5: 0.7600) val_iou 0.6292 lr 5.0e-04
+  ep 30 loss 0.1171 dice 0.0000 | val_loss 0.1660 val_dice 0.7658@0.7 (0.5: 0.7543) val_iou 0.6205 lr 5.0e-04
+  ep 31 loss 0.1145 dice 0.0000 | val_loss 0.1464 val_dice 0.7753@0.6 (0.5: 0.7753) val_iou 0.6331 lr 2.5e-04
+  ep 32 loss 0.1154 dice 0.0000 | val_loss 0.1498 val_dice 0.7771@0.6 (0.5: 0.7731) val_iou 0.6354 lr 2.5e-04
+  ep 33 loss 0.1117 dice 0.0000 | val_loss 0.1493 val_dice 0.7789@0.6 (0.5: 0.7744) val_iou 0.6379 lr 2.5e-04
+  ep 34 loss 0.1130 dice 0.0000 | val_loss 0.1473 val_dice 0.7789@0.6 (0.5: 0.7754) val_iou 0.6379 lr 2.5e-04
+  ep 35 loss 0.1096 dice 0.0000 | val_loss 0.1470 val_dice 0.7815@0.6 (0.5: 0.7772) val_iou 0.6414 lr 2.5e-04
+[E1] DONE best epoch 25 val_dice 0.7935 time 11.6 min
+>> /usr/bin/python3 -m src.train --config configs/baseline.yaml --exp E2 --set loss=bce_dice augmentation.enabled=false
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791009599.591986    1538 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1791009599.627974    1538 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX512_FP16 AVX_VNNI AMX_TILE AMX_INT8 AMX_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791009600.751396    1538 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Python     : 3.13.16
+TensorFlow : 2.21.0
+Keras      : 3.15.1
+GPU        : none (CPU only)
+CPU cores  : 2
+RAM        : 8.2 GB
+[E2] unet: params 1,945,521 trainable 1,942,577 | train [23, 24, 25, 27, 28, 30, 31, 32, 33, 34, 39, 40] val [26, 29, 35, 37]
+I0000 00:00:1791009602.707515    1538 generator_dataset_op.cc:213] Memory patch applied: M_TRIM_THRESHOLD=128 kb was set.
+  ep  1 loss 0.5450 dice 0.2792 | val_loss 0.6767 val_dice 0.4927@0.4 (0.5: 0.0000) val_iou 0.3268 lr 1.0e-03
+  ep  2 loss 0.4056 dice 0.4498 | val_loss 0.6240 val_dice 0.0473@0.3 (0.5: 0.0000) val_iou 0.0242 lr 1.0e-03
+  ep  3 loss 0.3542 dice 0.5085 | val_loss 0.6220 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  4 loss 0.3145 dice 0.5599 | val_loss 0.6343 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  5 loss 0.2898 dice 0.6001 | val_loss 0.6789 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  6 loss 0.2767 dice 0.6194 | val_loss 0.6845 val_dice 0.0025@0.3 (0.5: 0.0007) val_iou 0.0013 lr 1.0e-03
+  ep  7 loss 0.2556 dice 0.6541 | val_loss 0.7060 val_dice 0.0284@0.3 (0.5: 0.0152) val_iou 0.0144 lr 1.0e-03
+  ep  8 loss 0.2486 dice 0.6653 | val_loss 0.6865 val_dice 0.0724@0.3 (0.5: 0.0440) val_iou 0.0376 lr 1.0e-03
+  ep  9 loss 0.2382 dice 0.6809 | val_loss 0.6394 val_dice 0.1802@0.3 (0.5: 0.1255) val_iou 0.0990 lr 5.0e-04
+  ep 10 loss 0.2291 dice 0.6965 | val_loss 0.5679 val_dice 0.3235@0.3 (0.5: 0.2593) val_iou 0.1930 lr 5.0e-04
+  ep 11 loss 0.2236 dice 0.7053 | val_loss 0.5470 val_dice 0.3862@0.3 (0.5: 0.3302) val_iou 0.2393 lr 5.0e-04
+  ep 12 loss 0.2298 dice 0.6944 | val_loss 0.5090 val_dice 0.4297@0.3 (0.5: 0.3621) val_iou 0.2736 lr 5.0e-04
+  ep 13 loss 0.2259 dice 0.7050 | val_loss 0.3504 val_dice 0.6453@0.3 (0.5: 0.6056) val_iou 0.4763 lr 5.0e-04
+  ep 14 loss 0.2210 dice 0.7064 | val_loss 0.3110 val_dice 0.6852@0.3 (0.5: 0.6550) val_iou 0.5212 lr 5.0e-04
+  ep 15 loss 0.2181 dice 0.7151 | val_loss 0.2669 val_dice 0.7283@0.3 (0.5: 0.7028) val_iou 0.5726 lr 5.0e-04
+  ep 16 loss 0.2115 dice 0.7212 | val_loss 0.2533 val_dice 0.7404@0.3 (0.5: 0.7217) val_iou 0.5877 lr 5.0e-04
+  ep 17 loss 0.2165 dice 0.7151 | val_loss 0.2241 val_dice 0.7645@0.3 (0.5: 0.7573) val_iou 0.6188 lr 5.0e-04
+  ep 18 loss 0.2110 dice 0.7231 | val_loss 0.2251 val_dice 0.7624@0.3 (0.5: 0.7566) val_iou 0.6161 lr 5.0e-04
+  ep 19 loss 0.2116 dice 0.7222 | val_loss 0.2018 val_dice 0.7901@0.3 (0.5: 0.7879) val_iou 0.6530 lr 5.0e-04
+  ep 20 loss 0.2103 dice 0.7252 | val_loss 0.1983 val_dice 0.7912@0.4 (0.5: 0.7910) val_iou 0.6545 lr 5.0e-04
+  ep 21 loss 0.2033 dice 0.7380 | val_loss 0.1969 val_dice 0.7940@0.4 (0.5: 0.7931) val_iou 0.6583 lr 5.0e-04
+  ep 22 loss 0.2093 dice 0.7209 | val_loss 0.1934 val_dice 0.7974@0.5 (0.5: 0.7974) val_iou 0.6630 lr 5.0e-04
+  ep 23 loss 0.1995 dice 0.7434 | val_loss 0.2157 val_dice 0.7833@0.7 (0.5: 0.7741) val_iou 0.6438 lr 5.0e-04
+  ep 24 loss 0.1994 dice 0.7398 | val_loss 0.1959 val_dice 0.7948@0.6 (0.5: 0.7946) val_iou 0.6594 lr 5.0e-04
+  ep 25 loss 0.1993 dice 0.7405 | val_loss 0.2131 val_dice 0.7832@0.7 (0.5: 0.7808) val_iou 0.6436 lr 5.0e-04
+  ep 26 loss 0.1992 dice 0.7401 | val_loss 0.2037 val_dice 0.7884@0.7 (0.5: 0.7859) val_iou 0.6507 lr 5.0e-04
+  ep 27 loss 0.2034 dice 0.7338 | val_loss 0.1960 val_dice 0.7969@0.7 (0.5: 0.7940) val_iou 0.6624 lr 5.0e-04
+  ep 28 loss 0.1912 dice 0.7509 | val_loss 0.2051 val_dice 0.7913@0.7 (0.5: 0.7847) val_iou 0.6546 lr 2.5e-04
+  ep 29 loss 0.1923 dice 0.7541 | val_loss 0.2035 val_dice 0.7963@0.7 (0.5: 0.7872) val_iou 0.6615 lr 2.5e-04
+  ep 30 loss 0.1879 dice 0.7558 | val_loss 0.2118 val_dice 0.7883@0.7 (0.5: 0.7783) val_iou 0.6505 lr 2.5e-04
+  ep 31 loss 0.1881 dice 0.7538 | val_loss 0.1910 val_dice 0.8033@0.7 (0.5: 0.8012) val_iou 0.6712 lr 2.5e-04
+  ep 32 loss 0.1872 dice 0.7586 | val_loss 0.2097 val_dice 0.7891@0.7 (0.5: 0.7806) val_iou 0.6517 lr 2.5e-04
+  ep 33 loss 0.1838 dice 0.7617 | val_loss 0.1938 val_dice 0.8002@0.7 (0.5: 0.7972) val_iou 0.6670 lr 2.5e-04
+  ep 34 loss 0.1889 dice 0.7532 | val_loss 0.1939 val_dice 0.7990@0.7 (0.5: 0.7964) val_iou 0.6652 lr 2.5e-04
+  ep 35 loss 0.1784 dice 0.7691 | val_loss 0.2122 val_dice 0.7865@0.7 (0.5: 0.7760) val_iou 0.6481 lr 2.5e-04
+  ep 36 loss 0.1865 dice 0.7586 | val_loss 0.1925 val_dice 0.8001@0.7 (0.5: 0.7969) val_iou 0.6668 lr 2.5e-04
+  ep 37 loss 0.1823 dice 0.7627 | val_loss 0.1976 val_dice 0.7962@0.7 (0.5: 0.7920) val_iou 0.6615 lr 1.3e-04
+  ep 38 loss 0.1833 dice 0.7604 | val_loss 0.1884 val_dice 0.8020@0.6 (0.5: 0.8014) val_iou 0.6694 lr 1.3e-04
+  ep 39 loss 0.1819 dice 0.7640 | val_loss 0.1948 val_dice 0.8004@0.7 (0.5: 0.7953) val_iou 0.6672 lr 1.3e-04
+  ep 40 loss 0.1799 dice 0.7642 | val_loss 0.1941 val_dice 0.7996@0.7 (0.5: 0.7959) val_iou 0.6661 lr 1.3e-04
+[E2] DONE best epoch 31 val_dice 0.8033 time 13.2 min
+>> /usr/bin/python3 -m src.train --config configs/baseline.yaml --exp E3 --set loss=bce_dice
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791010394.046792    2207 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1791010394.081214    2207 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX512_FP16 AVX_VNNI AMX_TILE AMX_INT8 AMX_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791010395.021268    2207 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Python     : 3.13.16
+TensorFlow : 2.21.0
+Keras      : 3.15.1
+GPU        : none (CPU only)
+CPU cores  : 2
+RAM        : 8.2 GB
+[E3] unet: params 1,945,521 trainable 1,942,577 | train [23, 24, 25, 27, 28, 30, 31, 32, 33, 34, 39, 40] val [26, 29, 35, 37]
+I0000 00:00:1791010397.047135    2207 generator_dataset_op.cc:213] Memory patch applied: M_TRIM_THRESHOLD=128 kb was set.
+  ep  1 loss 0.5660 dice 0.2566 | val_loss 0.6738 val_dice 0.2210@0.3 (0.5: 0.0000) val_iou 0.1242 lr 1.0e-03
+  ep  2 loss 0.4343 dice 0.3975 | val_loss 0.6346 val_dice 0.3104@0.3 (0.5: 0.0000) val_iou 0.1837 lr 1.0e-03
+  ep  3 loss 0.3703 dice 0.4899 | val_loss 0.6179 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  4 loss 0.3293 dice 0.5456 | val_loss 0.6269 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  5 loss 0.3125 dice 0.5773 | val_loss 0.6555 val_dice 0.0001@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  6 loss 0.2946 dice 0.6010 | val_loss 0.6834 val_dice 0.0017@0.3 (0.5: 0.0002) val_iou 0.0009 lr 1.0e-03
+  ep  7 loss 0.2804 dice 0.6219 | val_loss 0.6517 val_dice 0.0673@0.3 (0.5: 0.0244) val_iou 0.0348 lr 1.0e-03
+  ep  8 loss 0.2784 dice 0.6269 | val_loss 0.6471 val_dice 0.1584@0.3 (0.5: 0.0997) val_iou 0.0860 lr 1.0e-03
+  ep  9 loss 0.2657 dice 0.6498 | val_loss 0.5698 val_dice 0.3039@0.3 (0.5: 0.2199) val_iou 0.1792 lr 5.0e-04
+  ep 10 loss 0.2537 dice 0.6628 | val_loss 0.4979 val_dice 0.4443@0.3 (0.5: 0.3707) val_iou 0.2856 lr 5.0e-04
+  ep 11 loss 0.2526 dice 0.6680 | val_loss 0.4454 val_dice 0.5275@0.3 (0.5: 0.4609) val_iou 0.3582 lr 5.0e-04
+  ep 12 loss 0.2493 dice 0.6695 | val_loss 0.3482 val_dice 0.6453@0.3 (0.5: 0.5962) val_iou 0.4763 lr 5.0e-04
+  ep 13 loss 0.2512 dice 0.6732 | val_loss 0.3264 val_dice 0.6710@0.3 (0.5: 0.6388) val_iou 0.5049 lr 5.0e-04
+  ep 14 loss 0.2465 dice 0.6751 | val_loss 0.3114 val_dice 0.6873@0.3 (0.5: 0.6473) val_iou 0.5236 lr 5.0e-04
+  ep 15 loss 0.2438 dice 0.6789 | val_loss 0.2619 val_dice 0.7373@0.3 (0.5: 0.7121) val_iou 0.5839 lr 5.0e-04
+  ep 16 loss 0.2378 dice 0.6903 | val_loss 0.2486 val_dice 0.7495@0.3 (0.5: 0.7309) val_iou 0.5993 lr 5.0e-04
+  ep 17 loss 0.2414 dice 0.6857 | val_loss 0.2411 val_dice 0.7588@0.3 (0.5: 0.7361) val_iou 0.6114 lr 5.0e-04
+  ep 18 loss 0.2382 dice 0.6891 | val_loss 0.2129 val_dice 0.7833@0.3 (0.5: 0.7719) val_iou 0.6437 lr 5.0e-04
+  ep 19 loss 0.2317 dice 0.6977 | val_loss 0.2055 val_dice 0.7934@0.3 (0.5: 0.7806) val_iou 0.6575 lr 5.0e-04
+  ep 20 loss 0.2365 dice 0.6920 | val_loss 0.1896 val_dice 0.8000@0.4 (0.5: 0.7999) val_iou 0.6667 lr 5.0e-04
+  ep 21 loss 0.2306 dice 0.6997 | val_loss 0.1884 val_dice 0.8013@0.5 (0.5: 0.8013) val_iou 0.6685 lr 5.0e-04
+  ep 22 loss 0.2330 dice 0.6984 | val_loss 0.2006 val_dice 0.7946@0.3 (0.5: 0.7859) val_iou 0.6592 lr 5.0e-04
+  ep 23 loss 0.2333 dice 0.6955 | val_loss 0.1939 val_dice 0.7961@0.6 (0.5: 0.7954) val_iou 0.6613 lr 5.0e-04
+  ep 24 loss 0.2324 dice 0.7003 | val_loss 0.2000 val_dice 0.7894@0.6 (0.5: 0.7888) val_iou 0.6520 lr 5.0e-04
+  ep 25 loss 0.2294 dice 0.7054 | val_loss 0.2016 val_dice 0.7973@0.7 (0.5: 0.7885) val_iou 0.6630 lr 5.0e-04
+  ep 26 loss 0.2365 dice 0.6939 | val_loss 0.1995 val_dice 0.7888@0.5 (0.5: 0.7888) val_iou 0.6512 lr 5.0e-04
+  ep 27 loss 0.2250 dice 0.7038 | val_loss 0.1847 val_dice 0.8053@0.4 (0.5: 0.8030) val_iou 0.6740 lr 2.5e-04
+  ep 28 loss 0.2226 dice 0.7126 | val_loss 0.1838 val_dice 0.8056@0.5 (0.5: 0.8056) val_iou 0.6744 lr 2.5e-04
+  ep 29 loss 0.2236 dice 0.7133 | val_loss 0.1860 val_dice 0.8034@0.6 (0.5: 0.8028) val_iou 0.6714 lr 2.5e-04
+  ep 30 loss 0.2223 dice 0.7087 | val_loss 0.1829 val_dice 0.8070@0.6 (0.5: 0.8068) val_iou 0.6764 lr 2.5e-04
+  ep 31 loss 0.2244 dice 0.7084 | val_loss 0.1848 val_dice 0.8042@0.5 (0.5: 0.8042) val_iou 0.6726 lr 2.5e-04
+  ep 32 loss 0.2218 dice 0.7129 | val_loss 0.1852 val_dice 0.8044@0.6 (0.5: 0.8039) val_iou 0.6728 lr 2.5e-04
+  ep 33 loss 0.2163 dice 0.7218 | val_loss 0.1878 val_dice 0.8017@0.6 (0.5: 0.8008) val_iou 0.6690 lr 2.5e-04
+  ep 34 loss 0.2196 dice 0.7139 | val_loss 0.1788 val_dice 0.8108@0.5 (0.5: 0.8108) val_iou 0.6818 lr 2.5e-04
+  ep 35 loss 0.2227 dice 0.7105 | val_loss 0.1766 val_dice 0.8133@0.4 (0.5: 0.8132) val_iou 0.6853 lr 2.5e-04
+  ep 36 loss 0.2204 dice 0.7138 | val_loss 0.1834 val_dice 0.8076@0.7 (0.5: 0.8050) val_iou 0.6773 lr 2.5e-04
+  ep 37 loss 0.2232 dice 0.7092 | val_loss 0.1839 val_dice 0.8062@0.5 (0.5: 0.8062) val_iou 0.6754 lr 2.5e-04
+  ep 38 loss 0.2274 dice 0.7025 | val_loss 0.1827 val_dice 0.8059@0.5 (0.5: 0.8059) val_iou 0.6750 lr 2.5e-04
+  ep 39 loss 0.2161 dice 0.7183 | val_loss 0.1807 val_dice 0.8093@0.4 (0.5: 0.8080) val_iou 0.6797 lr 2.5e-04
+  ep 40 loss 0.2115 dice 0.7249 | val_loss 0.1834 val_dice 0.8057@0.6 (0.5: 0.8049) val_iou 0.6746 lr 2.5e-04
+[E3] DONE best epoch 35 val_dice 0.8133 time 13.5 min
+>> /usr/bin/python3 -m src.train --config configs/baseline.yaml --exp E4 --set loss=bce_dice preprocessing=clahe
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791011206.891982    2868 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1791011206.931507    2868 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX512_FP16 AVX_VNNI AMX_TILE AMX_INT8 AMX_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791011207.979668    2868 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Python     : 3.13.16
+TensorFlow : 2.21.0
+Keras      : 3.15.1
+GPU        : none (CPU only)
+CPU cores  : 2
+RAM        : 8.2 GB
+[E4] unet: params 1,945,521 trainable 1,942,577 | train [23, 24, 25, 27, 28, 30, 31, 32, 33, 34, 39, 40] val [26, 29, 35, 37]
+I0000 00:00:1791011209.991601    2868 generator_dataset_op.cc:213] Memory patch applied: M_TRIM_THRESHOLD=128 kb was set.
+  ep  1 loss 0.5002 dice 0.3420 | val_loss 0.6636 val_dice 0.2210@0.3 (0.5: 0.0000) val_iou 0.1242 lr 1.0e-03
+  ep  2 loss 0.4006 dice 0.4420 | val_loss 0.6294 val_dice 0.0695@0.3 (0.5: 0.0000) val_iou 0.0360 lr 1.0e-03
+  ep  3 loss 0.3541 dice 0.5119 | val_loss 0.6184 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  4 loss 0.3155 dice 0.5635 | val_loss 0.6426 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  5 loss 0.2976 dice 0.5964 | val_loss 0.6674 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  6 loss 0.2818 dice 0.6184 | val_loss 0.7096 val_dice 0.0033@0.3 (0.5: 0.0004) val_iou 0.0017 lr 1.0e-03
+  ep  7 loss 0.2682 dice 0.6372 | val_loss 0.6962 val_dice 0.0355@0.3 (0.5: 0.0196) val_iou 0.0181 lr 1.0e-03
+  ep  8 loss 0.2638 dice 0.6456 | val_loss 0.6478 val_dice 0.1715@0.3 (0.5: 0.1313) val_iou 0.0938 lr 1.0e-03
+  ep  9 loss 0.2533 dice 0.6643 | val_loss 0.5591 val_dice 0.3485@0.3 (0.5: 0.2919) val_iou 0.2110 lr 5.0e-04
+  ep 10 loss 0.2407 dice 0.6795 | val_loss 0.4248 val_dice 0.5446@0.3 (0.5: 0.4970) val_iou 0.3742 lr 5.0e-04
+  ep 11 loss 0.2423 dice 0.6806 | val_loss 0.3884 val_dice 0.6028@0.3 (0.5: 0.5637) val_iou 0.4315 lr 5.0e-04
+  ep 12 loss 0.2394 dice 0.6821 | val_loss 0.3758 val_dice 0.6125@0.3 (0.5: 0.5703) val_iou 0.4414 lr 5.0e-04
+  ep 13 loss 0.2412 dice 0.6850 | val_loss 0.2698 val_dice 0.7271@0.3 (0.5: 0.7133) val_iou 0.5712 lr 5.0e-04
+  ep 14 loss 0.2358 dice 0.6889 | val_loss 0.2766 val_dice 0.7225@0.3 (0.5: 0.6984) val_iou 0.5656 lr 5.0e-04
+  ep 15 loss 0.2338 dice 0.6915 | val_loss 0.2574 val_dice 0.7402@0.3 (0.5: 0.7206) val_iou 0.5876 lr 5.0e-04
+  ep 16 loss 0.2278 dice 0.7023 | val_loss 0.2181 val_dice 0.7711@0.3 (0.5: 0.7666) val_iou 0.6275 lr 5.0e-04
+  ep 17 loss 0.2324 dice 0.6968 | val_loss 0.2236 val_dice 0.7711@0.3 (0.5: 0.7577) val_iou 0.6274 lr 5.0e-04
+  ep 18 loss 0.2302 dice 0.6990 | val_loss 0.1851 val_dice 0.8068@0.4 (0.5: 0.8059) val_iou 0.6762 lr 5.0e-04
+  ep 19 loss 0.2257 dice 0.7054 | val_loss 0.1855 val_dice 0.8074@0.3 (0.5: 0.8044) val_iou 0.6770 lr 5.0e-04
+  ep 20 loss 0.2297 dice 0.7008 | val_loss 0.1906 val_dice 0.8022@0.7 (0.5: 0.7989) val_iou 0.6697 lr 5.0e-04
+  ep 21 loss 0.2226 dice 0.7094 | val_loss 0.1859 val_dice 0.8058@0.6 (0.5: 0.8045) val_iou 0.6747 lr 5.0e-04
+  ep 22 loss 0.2241 dice 0.7090 | val_loss 0.1851 val_dice 0.8051@0.4 (0.5: 0.8050) val_iou 0.6738 lr 5.0e-04
+  ep 23 loss 0.2255 dice 0.7057 | val_loss 0.1850 val_dice 0.8042@0.5 (0.5: 0.8042) val_iou 0.6726 lr 5.0e-04
+  ep 24 loss 0.2234 dice 0.7107 | val_loss 0.1808 val_dice 0.8085@0.4 (0.5: 0.8078) val_iou 0.6785 lr 2.5e-04
+  ep 25 loss 0.2180 dice 0.7186 | val_loss 0.1801 val_dice 0.8102@0.6 (0.5: 0.8099) val_iou 0.6810 lr 2.5e-04
+  ep 26 loss 0.2258 dice 0.7068 | val_loss 0.1819 val_dice 0.8089@0.5 (0.5: 0.8089) val_iou 0.6792 lr 2.5e-04
+  ep 27 loss 0.2184 dice 0.7122 | val_loss 0.1888 val_dice 0.8001@0.5 (0.5: 0.8001) val_iou 0.6668 lr 2.5e-04
+  ep 28 loss 0.2169 dice 0.7200 | val_loss 0.1792 val_dice 0.8108@0.5 (0.5: 0.8108) val_iou 0.6818 lr 2.5e-04
+  ep 29 loss 0.2179 dice 0.7202 | val_loss 0.1812 val_dice 0.8076@0.5 (0.5: 0.8076) val_iou 0.6773 lr 2.5e-04
+  ep 30 loss 0.2180 dice 0.7140 | val_loss 0.1828 val_dice 0.8058@0.5 (0.5: 0.8058) val_iou 0.6747 lr 2.5e-04
+  ep 31 loss 0.2198 dice 0.7135 | val_loss 0.1818 val_dice 0.8076@0.6 (0.5: 0.8072) val_iou 0.6773 lr 2.5e-04
+  ep 32 loss 0.2162 dice 0.7199 | val_loss 0.1795 val_dice 0.8098@0.5 (0.5: 0.8098) val_iou 0.6804 lr 2.5e-04
+  ep 33 loss 0.2121 dice 0.7271 | val_loss 0.1815 val_dice 0.8089@0.6 (0.5: 0.8079) val_iou 0.6791 lr 2.5e-04
+  ep 34 loss 0.2141 dice 0.7203 | val_loss 0.1767 val_dice 0.8137@0.5 (0.5: 0.8137) val_iou 0.6859 lr 1.3e-04
+  ep 35 loss 0.2169 dice 0.7175 | val_loss 0.1791 val_dice 0.8117@0.6 (0.5: 0.8108) val_iou 0.6831 lr 1.3e-04
+  ep 36 loss 0.2140 dice 0.7214 | val_loss 0.1851 val_dice 0.8112@0.7 (0.5: 0.8054) val_iou 0.6823 lr 1.3e-04
+  ep 37 loss 0.2147 dice 0.7186 | val_loss 0.1763 val_dice 0.8138@0.6 (0.5: 0.8136) val_iou 0.6860 lr 1.3e-04
+  ep 38 loss 0.2197 dice 0.7121 | val_loss 0.1797 val_dice 0.8105@0.6 (0.5: 0.8100) val_iou 0.6813 lr 1.3e-04
+  ep 39 loss 0.2110 dice 0.7240 | val_loss 0.1781 val_dice 0.8125@0.5 (0.5: 0.8125) val_iou 0.6843 lr 1.3e-04
+  ep 40 loss 0.2068 dice 0.7306 | val_loss 0.1794 val_dice 0.8105@0.6 (0.5: 0.8099) val_iou 0.6813 lr 1.3e-04
+[E4] DONE best epoch 37 val_dice 0.8138 time 13.4 min
+>> /usr/bin/python3 -m src.train --config configs/efficientnet.yaml --exp E5 --set loss=bce_dice
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791012018.507524    3529 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1791012018.547239    3529 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX512_FP16 AVX_VNNI AMX_TILE AMX_INT8 AMX_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791012019.635734    3529 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Python     : 3.13.16
+TensorFlow : 2.21.0
+Keras      : 3.15.1
+GPU        : none (CPU only)
+CPU cores  : 2
+RAM        : 8.2 GB
+[E5] effnetb0_unet: params 6,788,140 trainable 6,745,125 | train [23, 24, 25, 27, 28, 30, 31, 32, 33, 34, 39, 40] val [26, 29, 35, 37]
+I0000 00:00:1791012022.245167    3529 generator_dataset_op.cc:213] Memory patch applied: M_TRIM_THRESHOLD=128 kb was set.
+  ep  1 loss 0.5786 dice 0.2258 | val_loss 0.6798 val_dice 0.2210@0.3 (0.5: 0.0000) val_iou 0.1242 lr 1.0e-03
+  ep  2 loss 0.4878 dice 0.3075 | val_loss 0.6389 val_dice 0.2379@0.3 (0.5: 0.0000) val_iou 0.1350 lr 1.0e-03
+  ep  3 loss 0.4187 dice 0.4080 | val_loss 0.6169 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  4 loss 0.3744 dice 0.4676 | val_loss 0.6427 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  5 loss 0.3475 dice 0.5092 | val_loss 0.6593 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  6 loss 0.3246 dice 0.5432 | val_loss 0.6972 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  7 loss 0.3112 dice 0.5643 | val_loss 0.7093 val_dice 0.0003@0.3 (0.5: 0.0000) val_iou 0.0002 lr 1.0e-03
+  ep  8 loss 0.3030 dice 0.5781 | val_loss 0.7217 val_dice 0.0061@0.3 (0.5: 0.0024) val_iou 0.0031 lr 1.0e-03
+  ep  9 loss 0.2921 dice 0.6012 | val_loss 0.6865 val_dice 0.0855@0.3 (0.5: 0.0522) val_iou 0.0447 lr 5.0e-04
+  ep 10 loss 0.2794 dice 0.6156 | val_loss 0.8421 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 5.0e-04
+  ep 11 loss 0.2761 dice 0.6242 | val_loss 0.6356 val_dice 0.2423@0.3 (0.5: 0.1911) val_iou 0.1379 lr 5.0e-04
+  ep 12 loss 0.2752 dice 0.6237 | val_loss 0.5169 val_dice 0.4315@0.3 (0.5: 0.3684) val_iou 0.2751 lr 5.0e-04
+  ep 13 loss 0.2724 dice 0.6350 | val_loss 0.4167 val_dice 0.5610@0.3 (0.5: 0.5127) val_iou 0.3899 lr 5.0e-04
+  ep 14 loss 0.2668 dice 0.6371 | val_loss 0.3349 val_dice 0.6618@0.3 (0.5: 0.6228) val_iou 0.4946 lr 5.0e-04
+  ep 15 loss 0.2643 dice 0.6429 | val_loss 0.2618 val_dice 0.7381@0.3 (0.5: 0.7218) val_iou 0.5849 lr 5.0e-04
+  ep 16 loss 0.2575 dice 0.6565 | val_loss 0.2401 val_dice 0.7522@0.3 (0.5: 0.7474) val_iou 0.6029 lr 5.0e-04
+  ep 17 loss 0.2613 dice 0.6509 | val_loss 0.2317 val_dice 0.7592@0.4 (0.5: 0.7564) val_iou 0.6118 lr 5.0e-04
+  ep 18 loss 0.2570 dice 0.6570 | val_loss 0.2157 val_dice 0.7794@0.4 (0.5: 0.7773) val_iou 0.6385 lr 5.0e-04
+  ep 19 loss 0.2513 dice 0.6654 | val_loss 0.2121 val_dice 0.7842@0.6 (0.5: 0.7815) val_iou 0.6450 lr 5.0e-04
+  ep 20 loss 0.2549 dice 0.6625 | val_loss 0.2077 val_dice 0.7842@0.6 (0.5: 0.7837) val_iou 0.6451 lr 5.0e-04
+  ep 21 loss 0.2485 dice 0.6706 | val_loss 0.2105 val_dice 0.7801@0.6 (0.5: 0.7797) val_iou 0.6394 lr 5.0e-04
+  ep 22 loss 0.2490 dice 0.6714 | val_loss 0.2057 val_dice 0.7864@0.6 (0.5: 0.7856) val_iou 0.6479 lr 5.0e-04
+  ep 23 loss 0.2525 dice 0.6666 | val_loss 0.2140 val_dice 0.7816@0.7 (0.5: 0.7752) val_iou 0.6415 lr 5.0e-04
+  ep 24 loss 0.2463 dice 0.6783 | val_loss 0.2054 val_dice 0.7885@0.6 (0.5: 0.7863) val_iou 0.6508 lr 5.0e-04
+  ep 25 loss 0.2434 dice 0.6823 | val_loss 0.2095 val_dice 0.7855@0.7 (0.5: 0.7807) val_iou 0.6467 lr 5.0e-04
+  ep 26 loss 0.2518 dice 0.6700 | val_loss 0.2110 val_dice 0.7871@0.7 (0.5: 0.7799) val_iou 0.6490 lr 5.0e-04
+  ep 27 loss 0.2418 dice 0.6793 | val_loss 0.2087 val_dice 0.7876@0.7 (0.5: 0.7821) val_iou 0.6496 lr 5.0e-04
+  ep 28 loss 0.2406 dice 0.6872 | val_loss 0.2621 val_dice 0.7485@0.7 (0.5: 0.7211) val_iou 0.5981 lr 5.0e-04
+  ep 29 loss 0.2417 dice 0.6885 | val_loss 0.2052 val_dice 0.7906@0.7 (0.5: 0.7848) val_iou 0.6537 lr 5.0e-04
+  ep 30 loss 0.2393 dice 0.6850 | val_loss 0.2462 val_dice 0.7614@0.7 (0.5: 0.7403) val_iou 0.6147 lr 5.0e-04
+  ep 31 loss 0.2384 dice 0.6874 | val_loss 0.2231 val_dice 0.7765@0.7 (0.5: 0.7642) val_iou 0.6346 lr 5.0e-04
+  ep 32 loss 0.2385 dice 0.6905 | val_loss 0.2488 val_dice 0.7651@0.7 (0.5: 0.7402) val_iou 0.6196 lr 5.0e-04
+  ep 33 loss 0.2308 dice 0.7024 | val_loss 0.1988 val_dice 0.7906@0.6 (0.5: 0.7906) val_iou 0.6537 lr 5.0e-04
+  ep 34 loss 0.2334 dice 0.6946 | val_loss 0.2047 val_dice 0.7881@0.7 (0.5: 0.7842) val_iou 0.6503 lr 5.0e-04
+  ep 35 loss 0.2379 dice 0.6898 | val_loss 0.1987 val_dice 0.7930@0.6 (0.5: 0.7915) val_iou 0.6570 lr 5.0e-04
+  ep 36 loss 0.2334 dice 0.6960 | val_loss 0.2005 val_dice 0.7934@0.7 (0.5: 0.7894) val_iou 0.6575 lr 5.0e-04
+  ep 37 loss 0.2356 dice 0.6917 | val_loss 0.2139 val_dice 0.7863@0.7 (0.5: 0.7743) val_iou 0.6479 lr 5.0e-04
+  ep 38 loss 0.2389 dice 0.6870 | val_loss 0.2088 val_dice 0.7869@0.7 (0.5: 0.7786) val_iou 0.6486 lr 5.0e-04
+  ep 39 loss 0.2277 dice 0.7027 | val_loss 0.1975 val_dice 0.7965@0.7 (0.5: 0.7916) val_iou 0.6618 lr 2.5e-04
+  ep 40 loss 0.2226 dice 0.7103 | val_loss 0.1928 val_dice 0.7993@0.6 (0.5: 0.7972) val_iou 0.6657 lr 2.5e-04
+[E5] DONE best epoch 40 val_dice 0.7993 time 22.5 min
+E6 preprocessing chosen by val Dice (E3 vs E4): clahe
+>> /usr/bin/python3 -m src.train --config configs/efficientnet.yaml --exp E6 --set loss=bce_dice preprocessing=clahe
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791013375.693707    4265 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1791013375.738048    4265 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX512_FP16 AVX_VNNI AMX_TILE AMX_INT8 AMX_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791013376.708843    4265 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Python     : 3.13.16
+TensorFlow : 2.21.0
+Keras      : 3.15.1
+GPU        : none (CPU only)
+CPU cores  : 2
+RAM        : 8.2 GB
+[E6] effnetb0_unet: params 6,788,140 trainable 6,745,125 | train [23, 24, 25, 27, 28, 30, 31, 32, 33, 34, 39, 40] val [26, 29, 35, 37]
+I0000 00:00:1791013379.426522    4265 generator_dataset_op.cc:213] Memory patch applied: M_TRIM_THRESHOLD=128 kb was set.
+  ep  1 loss 0.5496 dice 0.2621 | val_loss 0.6808 val_dice 0.2210@0.3 (0.5: 0.0000) val_iou 0.1242 lr 1.0e-03
+  ep  2 loss 0.4577 dice 0.3593 | val_loss 0.6288 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  3 loss 0.3983 dice 0.4398 | val_loss 0.6207 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  4 loss 0.3595 dice 0.4907 | val_loss 0.6342 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  5 loss 0.3339 dice 0.5292 | val_loss 0.6565 val_dice 0.0000@0.3 (0.5: 0.0000) val_iou 0.0000 lr 1.0e-03
+  ep  6 loss 0.3115 dice 0.5620 | val_loss 0.6521 val_dice 0.0259@0.3 (0.5: 0.0048) val_iou 0.0131 lr 1.0e-03
+  ep  7 loss 0.2988 dice 0.5814 | val_loss 0.6984 val_dice 0.0139@0.3 (0.5: 0.0037) val_iou 0.0070 lr 1.0e-03
+  ep  8 loss 0.2910 dice 0.5955 | val_loss 0.6743 val_dice 0.0868@0.3 (0.5: 0.0455) val_iou 0.0454 lr 1.0e-03
+  ep  9 loss 0.2788 dice 0.6190 | val_loss 0.6520 val_dice 0.1648@0.3 (0.5: 0.1115) val_iou 0.0898 lr 5.0e-04
+  ep 10 loss 0.2666 dice 0.6335 | val_loss 0.5753 val_dice 0.3057@0.3 (0.5: 0.2451) val_iou 0.1804 lr 5.0e-04
+  ep 11 loss 0.2639 dice 0.6406 | val_loss 0.4649 val_dice 0.4963@0.3 (0.5: 0.4392) val_iou 0.3301 lr 5.0e-04
+  ep 12 loss 0.2632 dice 0.6404 | val_loss 0.4163 val_dice 0.5635@0.3 (0.5: 0.5106) val_iou 0.3923 lr 5.0e-04
+  ep 13 loss 0.2609 dice 0.6504 | val_loss 0.3298 val_dice 0.6720@0.3 (0.5: 0.6366) val_iou 0.5060 lr 5.0e-04
+  ep 14 loss 0.2570 dice 0.6509 | val_loss 0.2897 val_dice 0.7157@0.3 (0.5: 0.6883) val_iou 0.5573 lr 5.0e-04
+  ep 15 loss 0.2537 dice 0.6572 | val_loss 0.2489 val_dice 0.7570@0.3 (0.5: 0.7399) val_iou 0.6090 lr 5.0e-04
+  ep 16 loss 0.2457 dice 0.6717 | val_loss 0.2155 val_dice 0.7802@0.3 (0.5: 0.7777) val_iou 0.6396 lr 5.0e-04
+  ep 17 loss 0.2509 dice 0.6653 | val_loss 0.2074 val_dice 0.7879@0.4 (0.5: 0.7863) val_iou 0.6501 lr 5.0e-04
+  ep 18 loss 0.2465 dice 0.6713 | val_loss 0.2006 val_dice 0.7946@0.4 (0.5: 0.7942) val_iou 0.6592 lr 5.0e-04
+  ep 19 loss 0.2421 dice 0.6780 | val_loss 0.1989 val_dice 0.7932@0.5 (0.5: 0.7932) val_iou 0.6573 lr 5.0e-04
+  ep 20 loss 0.2446 dice 0.6763 | val_loss 0.1978 val_dice 0.7939@0.5 (0.5: 0.7939) val_iou 0.6583 lr 5.0e-04
+  ep 21 loss 0.2393 dice 0.6831 | val_loss 0.2008 val_dice 0.7939@0.7 (0.5: 0.7906) val_iou 0.6583 lr 5.0e-04
+  ep 22 loss 0.2401 dice 0.6836 | val_loss 0.1970 val_dice 0.7956@0.4 (0.5: 0.7945) val_iou 0.6606 lr 5.0e-04
+  ep 23 loss 0.2420 dice 0.6799 | val_loss 0.1923 val_dice 0.7998@0.5 (0.5: 0.7998) val_iou 0.6664 lr 5.0e-04
+  ep 24 loss 0.2380 dice 0.6890 | val_loss 0.1978 val_dice 0.7961@0.6 (0.5: 0.7935) val_iou 0.6612 lr 5.0e-04
+  ep 25 loss 0.2348 dice 0.6928 | val_loss 0.2037 val_dice 0.7932@0.7 (0.5: 0.7870) val_iou 0.6573 lr 5.0e-04
+  ep 26 loss 0.2433 dice 0.6811 | val_loss 0.2010 val_dice 0.7913@0.7 (0.5: 0.7887) val_iou 0.6547 lr 5.0e-04
+  ep 27 loss 0.2336 dice 0.6905 | val_loss 0.2008 val_dice 0.7935@0.7 (0.5: 0.7892) val_iou 0.6577 lr 5.0e-04
+  ep 28 loss 0.2314 dice 0.6994 | val_loss 0.2160 val_dice 0.7841@0.7 (0.5: 0.7703) val_iou 0.6449 lr 5.0e-04
+  ep 29 loss 0.2335 dice 0.6986 | val_loss 0.1962 val_dice 0.7988@0.7 (0.5: 0.7933) val_iou 0.6651 lr 2.5e-04
+  ep 30 loss 0.2313 dice 0.6950 | val_loss 0.1974 val_dice 0.7933@0.6 (0.5: 0.7920) val_iou 0.6575 lr 2.5e-04
+  ep 31 loss 0.2307 dice 0.6971 | val_loss 0.2060 val_dice 0.7896@0.7 (0.5: 0.7814) val_iou 0.6524 lr 2.5e-04
+  ep 32 loss 0.2296 dice 0.7010 | val_loss 0.1974 val_dice 0.7928@0.5 (0.5: 0.7928) val_iou 0.6567 lr 2.5e-04
+  ep 33 loss 0.2234 dice 0.7108 | val_loss 0.1894 val_dice 0.8006@0.5 (0.5: 0.8006) val_iou 0.6675 lr 2.5e-04
+  ep 34 loss 0.2272 dice 0.7024 | val_loss 0.1936 val_dice 0.7973@0.6 (0.5: 0.7954) val_iou 0.6629 lr 2.5e-04
+  ep 35 loss 0.2315 dice 0.6972 | val_loss 0.1895 val_dice 0.8017@0.4 (0.5: 0.8008) val_iou 0.6691 lr 2.5e-04
+  ep 36 loss 0.2271 dice 0.7029 | val_loss 0.1863 val_dice 0.8057@0.6 (0.5: 0.8044) val_iou 0.6746 lr 2.5e-04
+  ep 37 loss 0.2294 dice 0.6985 | val_loss 0.1880 val_dice 0.8047@0.6 (0.5: 0.8026) val_iou 0.6732 lr 2.5e-04
+  ep 38 loss 0.2341 dice 0.6928 | val_loss 0.1872 val_dice 0.8032@0.6 (0.5: 0.8030) val_iou 0.6711 lr 2.5e-04
+  ep 39 loss 0.2235 dice 0.7071 | val_loss 0.1888 val_dice 0.8029@0.6 (0.5: 0.8011) val_iou 0.6707 lr 2.5e-04
+  ep 40 loss 0.2186 dice 0.7144 | val_loss 0.1840 val_dice 0.8062@0.5 (0.5: 0.8062) val_iou 0.6753 lr 2.5e-04
+[E6] DONE best epoch 40 val_dice 0.8062 time 20.3 min
+ALL DONE

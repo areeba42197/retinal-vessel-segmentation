@@ -1,0 +1,18 @@
+DATASET REPORT
+--------------
+Dataset: DRIVE
+
+[training] subfolders: 1st_manual(20), images(20), mask(20)
+[test] subfolders: images(20), mask(20)
+
+Labelled training images: 20 (IDs 21-40)
+Labelled vessel masks   : 20
+Official test images    : 20
+Official test vessel GT : NOT PRESENT (only FOV masks) -> no test metrics possible
+(image, vessel-mask, FOV-mask) shapes: [((584, 565, 3), (584, 565), (584, 565))]
+Image channels: [3]  dtype (img, mask): [('uint8', 'uint8')]
+Vessel mask values (raw): [0, 255]  -> binarised with >127
+FOV mask values (raw)   : [0, 255]
+Missing files: 0
+Duplicate ids: 0
+Unreadable files: 0

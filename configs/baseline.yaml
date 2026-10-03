@@ -1,0 +1,40 @@
+# Standard U-Net baseline (E1 uses this with loss=bce and augmentation off; see src/run_experiments.sh)
+seed: 42
+split_seed: 42
+data_root: data/DRIVE
+n_val: 4
+n_test: 4
+
+model: unet
+filters: [16, 32, 64, 128]
+bottleneck: 256
+dropout: 0.1
+
+preprocessing: basic        # basic | green | clahe
+patch_size: 128             # CPU-friendly; must be a multiple of 32
+batch_size: 16
+steps_per_epoch: 30
+epochs: 40
+
+optimizer: AdamW
+learning_rate: 0.001
+weight_decay: 0.0001
+loss: bce_dice              # bce | dice | bce_dice
+bce_weight: 0.5
+dice_weight: 0.5
+lr_factor: 0.5
+lr_patience: 5
+early_stopping:
+  patience: 10
+  warmup: 10
+threshold: 0.5
+
+augmentation:
+  enabled: true
+  horizontal_flip: true
+  vertical_flip: true
+  rotation: 15
+  zoom: 0.10
+  brightness: 0.10
+  contrast: 0.10
+  gamma: 0.10

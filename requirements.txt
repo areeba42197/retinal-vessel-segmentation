@@ -1,0 +1,14 @@
+tensorflow-cpu>=2.16
+keras>=3.5
+numpy
+opencv-python-headless
+pillow
+scikit-image
+scikit-learn
+scipy
+matplotlib
+pandas
+PyYAML
+tabulate
+streamlit>=1.40
+plotly

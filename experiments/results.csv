@@ -1,0 +1,7 @@
+experiment_id,model,encoder,pretrained,preprocessing,augmentation,loss,optimizer,learning_rate,weight_decay,batch_size,image_size,threshold,best_epoch,val_loss,val_dice,val_iou,test_dice,test_iou,test_precision,test_recall,test_specificity,test_auc,test_pr_auc,test_mcc,training_time
+E1,unet,,False,basic,False,bce,AdamW,0.001,0.0001,16,128,0.5,25,0.1324754059314727,0.7935285473248789,0.6577267498251866,,,,,,,,,695.0
+E2,unet,,False,basic,False,bce_dice,AdamW,0.001,0.0001,16,128,0.7,31,0.1909817159175872,0.8032593207193233,0.6712058298228295,,,,,,,,,789.1
+E3,unet,,False,basic,True,bce_dice,AdamW,0.001,0.0001,16,128,0.45,35,0.1766180396080017,0.8132848412265098,0.6853243891036724,0.8152701363126751,0.6881485487124025,0.8392809397336946,0.7925949617459663,0.9771130425070693,0.9749376923490899,0.8999880243471529,0.7887515136141889,807.7
+E4,unet,,False,clahe,True,bce_dice,AdamW,0.001,0.0001,16,128,0.6,37,0.1763077676296234,0.8137813083691519,0.6860297465472758,,,,,,,,,806.2
+E5,effnet_unet,efficientnetb0,False,basic,True,bce_dice,AdamW,0.001,0.0001,16,128,0.6,40,0.1927635073661804,0.799323295852732,0.6657273295065878,,,,,,,,,1349.0
+E6,effnet_unet,efficientnetb0,False,clahe,True,bce_dice,AdamW,0.001,0.0001,16,128,0.5,40,0.1839860677719116,0.8062027975153059,0.6753264254911356,,,,,,,,,1220.2
