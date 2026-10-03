@@ -126,7 +126,7 @@ st.markdown(f"""<div class="hero"><h1>Retinal Blood Vessel Segmentation</h1>
 <span class="badge">Test Dice {M['dice']:.3f}</span><span class="badge">ROC-AUC {M['roc_auc']:.3f}</span>
 <span class="badge">Final model {sel['final']}</span><span class="badge">Research / educational — not a diagnostic tool</span></div>""", unsafe_allow_html=True)
 
-PAGES = ['Overview', 'Dataset', 'Pipeline', 'Training', 'Ablation', 'Test Results', 'Error Analysis', 'Baseline', 'Gallery', 'Live Demo', 'Limitations']
+PAGES = ['Overview', 'Dataset', 'Pipeline', 'Training', 'Ablation', 'Test Results', 'Error Analysis', 'Baseline', 'Gallery', 'Limitations']
 if "page" not in st.session_state:
     st.session_state.page = PAGES[0]
 with st.sidebar:
@@ -147,8 +147,8 @@ with st.sidebar:
 """)
     st.caption("Research and educational use only. Not a medical diagnostic system.")
 
-page_idx = PAGES.index(st.session_state.page)
 
+page_idx = ['Overview','Dataset','Pipeline','Training','Ablation','Test Results','Error Analysis','Baseline','Gallery','Live Demo','Limitations'].index(st.session_state.page)
 # ------------------------------------------------------------------ Overview
 if page_idx == 0:
     vd = res.set_index("experiment_id").loc[sel["final"], "val_dice"]
